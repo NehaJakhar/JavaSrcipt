@@ -1,0 +1,90 @@
+Print string:                 console.log("Neha Jakhar");         //outputs: "Neha Jakhar"
+Print int:                    console.log(2002);                  //outputs: "2002"
+Passing several argumnets:    console.log("Neha", "Jakhar", "(2002)");        //outputs: "Neha Jakhar (2002)"
+String concatenation:         console.log("Neha" + "Jakhar" + "(2002)");      // ouputs: "NehaJakhar(2002)"
+------------------------------------------------------------------------------------------------------------------------------------------
+1. Declaration
+//declare variables
+var declaredcvar;     //2 variables can be declared with same name
+OR
+let declaredvar;     //let prevents us from declaring another variable with the same name (an error is generated)
+
+//declare constant
+const greeting = "Hello!";   //declaration and initilization done together
+------------------------------------------------------------------------------------------------------------------------------------------
+2. Initilization
+let height = 180;
+let anotherHeight = height;
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+"use strict";    // We use it at the start of code when we want to force the interpreter to behave according to modern JavaScript standards.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+Note:
+1. Js allows variable value overloading, and we can also change the data type as well. Ex.
+let greeting = "Hello!";
+let counter = 100;
+console.log(greeting); // -> Hello!
+greeting = 1;
+console.log(greeting); // -> 1
+
+2. It also allows operations b/w different data types. Ex.
+let counter = 100;
+let greeting = "Hello!";
+greeting = greeting + counter;
+console.log(greeting); // -> Hello!100
+
+3. For constants once values have been entered into them during initialization, they can no longer be modified!
+
+4. "let, const" declares local varibales inside functions and program blocks, while "var" only declares local varibales inside functions. (VARIABLE SCOPE)
+
+5. JavaScript allows for variable shadowing. It means that we can declare a global variable and a local variable of the same name. 
+//Ex. Without variable shadowing
+let counter = 100;
+console.log(counter); // -> 100
+{
+   counter = 200;
+   console.log(counter); // -> 200
+}
+console.log(counter); // -> 200
+
+
+//Ex. With variable shadowing
+let counter = 100;
+console.log(counter); // -> 100
+{
+  let counter = 200;                           //local variable is declared 
+  console.log(counter); // -> 200
+}
+console.log(counter); // -> 100
+-----------------------------------------------------------------------------------------------------------------------------------------------
+// Nested Program Block
+let counter;
+console.log(counter); // -> undefined
+{
+    counter = 1;
+    {
+        console.log(counter); // -> 1
+    }
+}
+counter = counter + 1;
+console.log(counter); // -> 2
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+//Function
+function testFunction() {
+    console.log("Hello");
+    console.log("World");
+}
+
+console.log("let's begin:");
+testFunction();                   //calling function
+console.log("and again:");
+testFunction();
+console.log("and once more:");
+testFunction();
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+//Hoisting
+
