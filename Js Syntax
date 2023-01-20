@@ -1,0 +1,4 @@
+Print string:                 console.log("Neha Jakhar");         //outputs: "Neha Jakhar"
+Print int:                    console.log(2002);                  //outputs: "2002"
+Passing several argumnets:    console.log("Neha", "Jakhar", "(2002)");        //outputs: "Neha Jakhar (2002)"
+String concatenation:         console.log("Neha" + "Jakhar" + "(2002)");      // ouputs: "NehaJakhar(2002)"
